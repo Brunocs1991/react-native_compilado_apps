@@ -28,9 +28,7 @@ class App extends Component<AppPropsType, AppStateType> {
         <Text style={styles.logo}>Menu Pizza</Text>
         <Picker
           selectedValue={this.state.pizza}
-          onValueChange={(itemValue, itemIndex) =>
-            this.setState({pizza: itemValue})
-          }>
+          onValueChange={itemValue => this.setState({pizza: itemValue})}>
           {pizzasItem}
         </Picker>
         <Text style={styles.pizzas}>
